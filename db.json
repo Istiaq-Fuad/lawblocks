@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "id": "hMqSJHCF3m",
+      "description": "this is a murder case",
+      "title": "Murder",
+      "createdAt": "July 25, 2024",
+      "status": "closed"
+    },
+    {
+      "id": "aMqSJHCF3m",
+      "title": "Car theft",
+      "createdAt": "July 24, 2024",
+      "status": "active",
+      "description": "this is a car theft case"
+    },
+    {
+      "id": "bMqSJHCF3m",
+      "title": "Robbery",
+      "createdAt": "July 23, 2024",
+      "status": "closed",
+      "description": "this is a robbery case"
+    },
+    {
+      "id": "cMqSJHCF3m",
+      "title": "Murder",
+      "createdAt": "july 22, 2024",
+      "status": "active",
+      "description": "This is a murder case"
+    },
+    {
+      "id": "mg1LrJlYh0",
+      "title": "Attempt to muder",
+      "createdAt": "August 14, 2024",
+      "status": "active",
+      "description": "this is a attempt to murder case"
+    }
+  ],
+  "members": [
+    {
+      "email": "police@gmail.com",
+      "role": "police"
+    },
+    {
+      "email": "courtclerk@gmail.com",
+      "role": "court"
+    },
+    {
+      "email": "judge@gmail.com",
+      "role": "judge"
+    },
+    {
+      "email": "lawyer@gmail.com",
+      "role": "lawyer"
+    }
+  ]
+}
