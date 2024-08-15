@@ -15,15 +15,27 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { cn } from "@/lib/utils";
 import { useTransition } from "react";
 import { loginWithEmailAndPassword } from "../actions";
-import { AuthTokenResponse } from "@supabase/supabase-js";
 
 const FormSchema = z.object({
-  email: z.string().email(),
+  email: z
+    .string()
+    .email()
+    .refine(
+      (value) => {
+        const validEmails = [
+          "police@gmail.com",
+          "courtclerk@gmail.com",
+          "judge@gmail.com",
+          "lawyer@gmail.com",
+        ];
+        return validEmails.includes(value);
+      },
+      { message: "This email isn't registered" }
+    ),
   password: z.string().min(1, { message: "Password can not be empty" }),
 });
 
@@ -33,7 +45,7 @@ export default function AuthForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      email: "",
+      // email: "",
       password: "",
     },
   });
