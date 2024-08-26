@@ -3,6 +3,7 @@ import { Jost } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
+import CaseContextProvider from "@/components/context/caseContext";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -23,7 +24,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="">{children}</main>
+          <CaseContextProvider>
+            <main className="">{children}</main>
+          </CaseContextProvider>
           <Toaster />
         </ThemeProvider>
       </body>

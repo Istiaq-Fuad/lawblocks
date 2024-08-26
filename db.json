@@ -2,38 +2,38 @@
   "cases": [
     {
       "id": "hMqSJHCF3m",
-      "description": "this is a murder case",
       "title": "Murder",
       "createdAt": "July 25, 2024",
-      "status": "closed"
+      "status": "closed",
+      "description": "On the evening of July 25, 2024, local authorities responded to a distress call from 1742 Elm Street. Upon arrival, they discovered the body of John Doe, a 45-year-old local businessman. The victim had suffered multiple stab wounds to the chest and torso. Initial forensic analysis suggested the murder weapon was a large kitchen knife, which was not found at the scene. Neighbors reported hearing an argument shortly before the estimated time of death. The case involved extensive interviews with family members, business associates, and potential witnesses. After a thorough investigation and the discovery of crucial DNA evidence, the perpetrator was apprehended and convicted, leading to the case being closed on August 15, 2024"
     },
     {
       "id": "aMqSJHCF3m",
       "title": "Car theft",
       "createdAt": "July 24, 2024",
       "status": "active",
-      "description": "this is a car theft case"
+      "description": "In the early hours of July 24, 2024, a 2023 Tesla Model S was reported stolen from the driveway of a residence at 387 Oak Avenue. The vehicle's owner, Sarah Johnson, stated that she had last seen the car at approximately 11 PM the previous night. Security camera footage from a neighboring property showed two unidentified individuals approaching the vehicle at around 2:30 AM. The thieves appeared to use a sophisticated electronic device to bypass the car's security system. The stolen vehicle is valued at approximately $90,000 and is described as midnight blue with custom chrome rims. Local law enforcement has put out an APB and is working with regional authorities to track down the vehicle and the perpetrators. The case remains active as investigators follow up on leads and analyze traffic camera footage from the surrounding areas."
     },
     {
       "id": "bMqSJHCF3m",
       "title": "Robbery",
       "createdAt": "July 23, 2024",
       "status": "closed",
-      "description": "this is a robbery case"
+      "description": "On July 23, 2024, at approximately 9:45 PM, two masked individuals entered the First National Bank on Main Street, brandishing what appeared to be semi-automatic weapons. The suspects threatened the three employees present and two customers, demanding access to the vault. They successfully absconded with an estimated $250,000 in cash and various safety deposit box contents. Security footage revealed that the robbers escaped in a dark-colored SUV, possibly a Ford Explorer. In the following weeks, detectives identified the suspects through a combination of forensic evidence left at the scene and an anonymous tip. Both perpetrators were arrested on August 10, 2024, during a carefully coordinated operation. The majority of the stolen items were recovered, and the case was officially closed on August 20, 2024, following the suspects' arraignment."
     },
     {
       "id": "cMqSJHCF3m",
       "title": "Murder",
       "createdAt": "july 22, 2024",
       "status": "active",
-      "description": "This is a murder case"
+      "description": "The tranquility of Willow Creek Park was shattered on the morning of July 22, 2024, when a jogger discovered the body of Jane Smith, a 28-year-old graduate student, near the park's eastern trail. The victim appeared to have been strangled, with signs of a struggle evident in the surrounding area. Preliminary forensic analysis suggested the murder occurred between 10 PM and midnight the previous evening. Investigators have been conducting extensive interviews with the victim's friends, family, and fellow students, as well as analyzing her recent communications and movements. Several persons of interest have been identified, but no arrests have been made as of yet. The case has garnered significant media attention, and a dedicated task force has been established to pursue all available leads. The investigation remains active, with detectives working tirelessly to bring the perpetrator to justice."
     },
     {
       "id": "mg1LrJlYh0",
       "title": "Attempt to muder",
       "createdAt": "August 14, 2024",
-      "status": "active",
-      "description": "this is a attempt to murder case"
+      "status": "closed",
+      "description": "On the afternoon of August 14, 2024, emergency services responded to a 911 call from an apartment complex at 567 Pine Street. The caller, identified as Michael Brown, reported that his neighbor, Lisa Green, had been attacked in her home. Upon arrival, paramedics found Ms. Green, 35, unconscious with severe blunt force trauma to the head. She was immediately transported to Mercy General Hospital in critical condition. Crime scene investigators discovered signs of forced entry and a struggle within the apartment. A broken lamp, believed to be the weapon used in the attack, was collected as evidence. Through swift police work and cooperation from witnesses, a suspect was apprehended within 24 hours. The victim regained consciousness on August 18 and was able to positively identify her attacker. With this crucial testimony and the forensic evidence collected, the case against the perpetrator was solidified. The case was officially closed on August 25, 2024, with charges of attempted murder filed against the suspect."
     }
   ],
   "members": [

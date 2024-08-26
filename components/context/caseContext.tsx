@@ -12,12 +12,12 @@ export const CaseContext = createContext<CaseContextType | null>(null);
 
 export default function CaseContextProvider({
   children,
-  caseData,
-}: {
+}: // caseData,
+{
   children: React.ReactNode;
-  caseData: CaseType[];
+  // caseData: CaseType[];
 }) {
-  const [cases, setCases] = useState(caseData);
+  const [cases, setCases] = useState<CaseType[]>([]);
   return (
     <CaseContext.Provider
       value={{

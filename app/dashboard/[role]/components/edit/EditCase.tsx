@@ -19,7 +19,7 @@ import { CaseType } from "@/lib/types";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "@/components/ui/checkbox";
-import useCaseContext from "@/components/context/usecaseContext";
+import useCaseContext from "@/components/context/useCaseContext";
 
 export default function EditCase({ caseItem }: { caseItem: CaseType }) {
   const { id, description, status } = caseItem;
@@ -124,18 +124,3 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
     </Dialog>
   );
 }
-// export default function EditCase() {
-//   return (
-//     <DailogForm
-//       id="update-trigger"
-//       title="Edit Case"
-//       Trigger={
-//         <Button variant="outline" className="flex gap-x-2">
-//           <InfoCircledIcon />
-//           Info
-//         </Button>
-//       }
-//       form={<EditForm />}
-//     />
-//   );
-// }

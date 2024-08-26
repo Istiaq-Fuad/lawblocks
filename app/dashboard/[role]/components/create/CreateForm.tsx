@@ -18,7 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-import useCaseContext from "@/components/context/usecaseContext";
+import useCaseContext from "@/components/context/useCaseContext";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function CreateForm() {

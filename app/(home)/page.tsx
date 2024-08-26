@@ -7,6 +7,7 @@ import { AiOutlineBlock } from "react-icons/ai";
 
 export default function Home() {
   return (
+    
     <div className="h-screen p-10 text-center">
       <div className="flex justify-center">
         <CubeIcon height={45} width={45} />

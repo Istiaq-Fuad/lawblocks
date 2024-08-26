@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import { getZipFileData } from "../actions";
 
-function DownloadCase({ caseFile }: { caseFile: string }) {
+function DownloadCase({
+  caseFile,
+  buttonText,
+}: {
+  caseFile: string;
+  buttonText?: string;
+}) {
   const handleDownload = async () => {
     if (!caseFile) return;
 
@@ -26,7 +32,8 @@ function DownloadCase({ caseFile }: { caseFile: string }) {
 
   return (
     <Button variant="outline" onClick={handleDownload}>
-      <DownloadIcon />
+      <DownloadIcon />{" "}
+      {buttonText && <span className="ml-4">{buttonText}</span>}
     </Button>
   );
 }

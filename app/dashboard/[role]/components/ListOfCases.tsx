@@ -6,7 +6,10 @@ import { cn } from "@/lib/utils";
 import DownloadCase from "./DownloadCase";
 import { CaseType } from "@/lib/types";
 import { useSearchParams } from "next/navigation";
-import useCaseContext from "@/components/context/usecaseContext";
+import useCaseContext from "@/components/context/useCaseContext";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 export default function ListOfCases() {
   const searchParams = useSearchParams();
@@ -62,7 +65,13 @@ export default function ListOfCases() {
 
             <div className="flex gap-4 items-center">
               <DownloadCase caseFile={caseItem.id + ".zip"} />
-              <EditCase caseItem={caseItem} />
+              {/* <EditCase caseItem={caseItem} /> */}
+              <Link href={`/case/${caseItem.id}`}>
+                <Button variant="outline" className="flex gap-x-2">
+                  <InfoCircledIcon />
+                  Info
+                </Button>
+              </Link>
             </div>
           </div>
         );
