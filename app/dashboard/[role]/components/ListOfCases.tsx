@@ -66,9 +66,18 @@ export default function ListOfCases() {
 
             <div className="flex gap-4 items-center">
               <DownloadCase caseFile={caseItem.id + ".zip"} />
-              {pathName.split("/").pop() === "court" && (
-                <EditCase caseItem={caseItem} />
-              )}
+
+              <EditCase
+                caseItem={caseItem}
+                idType={
+                  pathName.split("/").pop() as
+                    | "judge"
+                    | "court"
+                    | "police"
+                    | "lawyer"
+                }
+              />
+
               <Link href={`/case/${caseItem.id}`}>
                 <Button variant="outline" className="flex gap-x-2">
                   <InfoCircledIcon />

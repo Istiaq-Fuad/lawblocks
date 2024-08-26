@@ -21,7 +21,13 @@ import { cn } from "@/lib/utils";
 import { Checkbox } from "@/components/ui/checkbox";
 import useCaseContext from "@/components/context/useCaseContext";
 
-export default function EditCase({ caseItem }: { caseItem: CaseType }) {
+export default function EditCase({
+  caseItem,
+  idType,
+}: {
+  caseItem: CaseType;
+  idType: "judge" | "court" | "police" | "lawyer";
+}) {
   const { id, description, status } = caseItem;
 
   const pathName = usePathname();
@@ -61,7 +67,7 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
           if (item.id === id) {
             return {
               ...item,
-              description: caseDetails,
+              description: caseDetails ? caseDetails : item.description,
               status: isChecked ? "closed" : "active",
             };
           }
@@ -75,6 +81,10 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
       }
     });
   };
+
+  if (!(idType === "judge" || idType === "court")) {
+    return null;
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -96,19 +106,21 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
               value={caseDetails}
               onChange={(e) => setCaseDetails(e.target.value)}
             />
-            <div className="flex gap-x-3">
-              <Checkbox
-                id="caseState"
-                checked={isChecked}
-                onClick={() => setIsChecked(!isChecked)}
-              />
-              <label
-                htmlFor="caseState"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Close this case
-              </label>
-            </div>
+            {idType === "judge" && (
+              <div className="flex gap-x-3">
+                <Checkbox
+                  id="caseState"
+                  checked={isChecked}
+                  onClick={() => setIsChecked(!isChecked)}
+                />
+                <label
+                  htmlFor="caseState"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Close this case
+                </label>
+              </div>
+            )}
             <Button type="submit" className="self-end">
               <span className="mr-2">Update</span>
               <AiOutlineLoading3Quarters
