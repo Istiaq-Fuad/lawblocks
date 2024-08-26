@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { Button } from "@/components/ui/button";
-import { InfoCircledIcon } from "@radix-ui/react-icons";
+import { InfoCircledIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { DialogHeader } from "@/components/ui/dialog";
 import { usePathname } from "next/navigation";
 import { Textarea } from "@/components/ui/textarea";
@@ -31,7 +31,7 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
   );
 
   const [caseDetails, setCaseDetails] = useState("");
-  const [caseDescription, setCaseDescription] = useState(description);
+  // const [caseDescription, setCaseDescription] = useState(description);
   const [isPending, startTransition] = useTransition();
   const { setCases, cases } = useCaseContext();
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +55,7 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
 
       if (response.ok) {
         toast({ title: "Case updated successfully" });
-        setCaseDescription(caseDetails);
+        // setCaseDescription(caseDetails);
         setCaseDetails("");
         const newCases: CaseType[] = cases.map((item) => {
           if (item.id === id) {
@@ -80,45 +80,42 @@ export default function EditCase({ caseItem }: { caseItem: CaseType }) {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant="outline" className="flex gap-x-2">
-          <InfoCircledIcon />
-          Info
+          <Pencil1Icon />
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader className="space-y-5">
           <DialogTitle>Case details</DialogTitle>
-          <DialogDescription>{caseDescription}</DialogDescription>
-          {pathName.split("/").pop() === "court" && (
-            <form
-              onSubmit={(e) => handleFormSubmit(e)}
-              className="flex flex-col gap-y-4"
-            >
-              <Textarea
-                placeholder="Enter new case details"
-                value={caseDetails}
-                onChange={(e) => setCaseDetails(e.target.value)}
+
+          <form
+            onSubmit={(e) => handleFormSubmit(e)}
+            className="flex flex-col gap-y-4"
+          >
+            <Textarea
+              placeholder="Enter new case details"
+              value={caseDetails}
+              onChange={(e) => setCaseDetails(e.target.value)}
+            />
+            <div className="flex gap-x-3">
+              <Checkbox
+                id="caseState"
+                checked={isChecked}
+                onClick={() => setIsChecked(!isChecked)}
               />
-              <div className="flex gap-x-3">
-                <Checkbox
-                  id="caseState"
-                  checked={isChecked}
-                  onClick={() => setIsChecked(!isChecked)}
-                />
-                <label
-                  htmlFor="caseState"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Close this case
-                </label>
-              </div>
-              <Button type="submit" className="self-end">
-                <span className="mr-2">Update</span>
-                <AiOutlineLoading3Quarters
-                  className={cn("animate-spin ml-3", { hidden: !isPending })}
-                />
-              </Button>
-            </form>
-          )}
+              <label
+                htmlFor="caseState"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Close this case
+              </label>
+            </div>
+            <Button type="submit" className="self-end">
+              <span className="mr-2">Update</span>
+              <AiOutlineLoading3Quarters
+                className={cn("animate-spin ml-3", { hidden: !isPending })}
+              />
+            </Button>
+          </form>
         </DialogHeader>
       </DialogContent>
     </Dialog>

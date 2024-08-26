@@ -1,4 +1,6 @@
 import DownloadCase from "@/app/dashboard/[role]/components/DownloadCase";
+import EditCase from "@/app/dashboard/[role]/components/edit/EditCase";
+import useCaseContext from "@/components/context/useCaseContext";
 import { CaseType } from "@/lib/types";
 
 async function CaseDetails({ params }: { params: { id: string } }) {
@@ -23,7 +25,7 @@ async function CaseDetails({ params }: { params: { id: string } }) {
         {caseItem.id}
         {"  -  "}
         {caseItem.title}
-        <span className="text-sm block text-center mt-4">
+        <span className="text-sm block text-center mt-4 font-semibold">
           {caseItem.status}
           {"  -  "}
           {caseItem.createdAt}
@@ -36,6 +38,7 @@ async function CaseDetails({ params }: { params: { id: string } }) {
       />
 
       <p className="text-lg text-center">{caseItem.description}</p>
+
     </div>
   );
 }

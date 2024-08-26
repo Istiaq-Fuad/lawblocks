@@ -5,7 +5,7 @@ import EditCase from "./edit/EditCase";
 import { cn } from "@/lib/utils";
 import DownloadCase from "./DownloadCase";
 import { CaseType } from "@/lib/types";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import useCaseContext from "@/components/context/useCaseContext";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,7 @@ export default function ListOfCases() {
   const query = searchParams.get("q");
 
   const { cases } = useCaseContext();
+  const pathName = usePathname();
 
   let filteredCases = [...cases];
 
@@ -65,7 +66,9 @@ export default function ListOfCases() {
 
             <div className="flex gap-4 items-center">
               <DownloadCase caseFile={caseItem.id + ".zip"} />
-              {/* <EditCase caseItem={caseItem} /> */}
+              {pathName.split("/").pop() === "court" && (
+                <EditCase caseItem={caseItem} />
+              )}
               <Link href={`/case/${caseItem.id}`}>
                 <Button variant="outline" className="flex gap-x-2">
                   <InfoCircledIcon />

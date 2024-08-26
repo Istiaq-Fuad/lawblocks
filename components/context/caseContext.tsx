@@ -18,6 +18,7 @@ export default function CaseContextProvider({
   // caseData: CaseType[];
 }) {
   const [cases, setCases] = useState<CaseType[]>([]);
+
   return (
     <CaseContext.Provider
       value={{
