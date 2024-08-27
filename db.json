@@ -3,6 +3,8 @@
     {
       "id": "hMqSJHCF3m",
       "title": "Murder",
+      "chiefJudge": "Shahriar Anan",
+      "chiefInvestigator": "Jane Smith",
       "createdAt": "July 25, 2024",
       "status": "closed",
       "description": "On the evening of July 25, 2024, local authorities responded to a distress call from 1742 Elm Street. Upon arrival, they discovered the body of John Doe, a 45-year-old local businessman. The victim had suffered multiple stab wounds to the chest and torso. Initial forensic analysis suggested the murder weapon was a large kitchen knife, which was not found at the scene. Neighbors reported hearing an argument shortly before the estimated time of death. The case involved extensive interviews with family members, business associates, and potential witnesses. After a thorough investigation and the discovery of crucial DNA evidence, the perpetrator was apprehended and convicted, leading to the case being closed on August 15, 2024"
@@ -10,6 +12,8 @@
     {
       "id": "aMqSJHCF3m",
       "title": "Car theft",
+      "chiefJudge": "Wasima Ibnat",
+      "chiefInvestigator": "John Doe",
       "createdAt": "July 24, 2024",
       "status": "active",
       "description": "In the early hours of July 24, 2024, a 2023 Tesla Model S was reported stolen from the driveway of a residence at 387 Oak Avenue. The vehicle's owner, Sarah Johnson, stated that she had last seen the car at approximately 11 PM the previous night. Security camera footage from a neighboring property showed two unidentified individuals approaching the vehicle at around 2:30 AM. The thieves appeared to use a sophisticated electronic device to bypass the car's security system. The stolen vehicle is valued at approximately $90,000 and is described as midnight blue with custom chrome rims. Local law enforcement has put out an APB and is working with regional authorities to track down the vehicle and the perpetrators. The case remains active as investigators follow up on leads and analyze traffic camera footage from the surrounding areas."
@@ -17,6 +21,8 @@
     {
       "id": "bMqSJHCF3m",
       "title": "Robbery",
+      "chiefJudge": "Azad Khalid",
+      "chiefInvestigator": "Mike Brown",
       "createdAt": "July 23, 2024",
       "status": "closed",
       "description": "On July 23, 2024, at approximately 9:45 PM, two masked individuals entered the First National Bank on Main Street, brandishing what appeared to be semi-automatic weapons. The suspects threatened the three employees present and two customers, demanding access to the vault. They successfully absconded with an estimated $250,000 in cash and various safety deposit box contents. Security footage revealed that the robbers escaped in a dark-colored SUV, possibly a Ford Explorer. In the following weeks, detectives identified the suspects through a combination of forensic evidence left at the scene and an anonymous tip. Both perpetrators were arrested on August 10, 2024, during a carefully coordinated operation. The majority of the stolen items were recovered, and the case was officially closed on August 20, 2024, following the suspects' arraignment."
@@ -24,6 +30,8 @@
     {
       "id": "cMqSJHCF3m",
       "title": "Murder",
+      "chiefJudge": "Mamudul Haque",
+      "chiefInvestigator": "Emily Davis",
       "createdAt": "july 22, 2024",
       "status": "active",
       "description": "The tranquility of Willow Creek Park was shattered on the morning of July 22, 2024, when a jogger discovered the body of Jane Smith, a 28-year-old graduate student, near the park's eastern trail. The victim appeared to have been strangled, with signs of a struggle evident in the surrounding area. Preliminary forensic analysis suggested the murder occurred between 10 PM and midnight the previous evening. Investigators have been conducting extensive interviews with the victim's friends, family, and fellow students, as well as analyzing her recent communications and movements. Several persons of interest have been identified, but no arrests have been made as of yet. The case has garnered significant media attention, and a dedicated task force has been established to pursue all available leads. The investigation remains active, with detectives working tirelessly to bring the perpetrator to justice."
@@ -31,6 +39,8 @@
     {
       "id": "mg1LrJlYh0",
       "title": "Attempt to muder",
+      "chiefJudge": "Nabil Khan",
+      "chiefInvestigator": "Mike Brown",
       "createdAt": "August 14, 2024",
       "status": "active",
       "description": "The tranquility of Willow Creek Park was shattered on the morning of July 22, 2024, when a jogger discovered the body of Jane Smith, a 28-year-old graduate student, near the park's eastern trail. The victim appeared to have been strangled, with signs of a struggle evident in the surrounding area. Preliminary forensic analysis suggested the murder occurred between 10 PM and midnight the previous evening. Investigators have been conducting extensive interviews with the victim's friends, family, and fellow students, as well as analyzing her recent communications and movements. Several persons of interest have been identified, but no arrests have been made as of yet. The case has garnered significant media attention, and a dedicated task force has been established to pursue all available leads. The investigation remains active, with detectives working tirelessly to bring the perpetrator to justice."

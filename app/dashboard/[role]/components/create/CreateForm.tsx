@@ -30,6 +30,8 @@ export default function CreateForm() {
     defaultValues: {
       title: "",
       description: "",
+      chiefJudge: "",
+      chiefInvestigator: "",
     },
   });
 
@@ -37,6 +39,8 @@ export default function CreateForm() {
     const formData = new FormData();
     formData.append("title", form.getValues().title);
     formData.append("description", form.getValues().description);
+    formData.append("chiefJudge", form.getValues().chiefJudge);
+    formData.append("chiefInvestigator", form.getValues().chiefInvestigator);
 
     if (!evidenceFile) {
       toast({ title: "Please select a file" });
@@ -68,7 +72,7 @@ export default function CreateForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(buttonSubmitHandler)}
-        className="w-full space-y-6"
+        className="w-full space-y-3"
       >
         <FormField
           control={form.control}
@@ -79,6 +83,44 @@ export default function CreateForm() {
               <FormControl>
                 <Input
                   placeholder="case title"
+                  type="text"
+                  {...field}
+                  onChange={field.onChange}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="chiefJudge"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Chief Judge</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Judge name"
+                  type="text"
+                  {...field}
+                  onChange={field.onChange}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="chiefInvestigator"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Chief Investigator</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Investigator name"
                   type="text"
                   {...field}
                   onChange={field.onChange}

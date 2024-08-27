@@ -32,13 +32,23 @@ async function CaseDetails({ params }: { params: { id: string } }) {
         </span>
       </p>
 
+      <div className="flex justify-around items-center w-full">
+        <div>
+          <p className="opacity-60">Chief Judge</p>
+          <p>- {caseItem.chiefJudge}</p>
+        </div>
+        <div>
+          <p className="opacity-60">Chief Investigator</p>
+          <p>- {caseItem.chiefInvestigator}</p>
+        </div>
+      </div>
+
       <DownloadCase
         caseFile={caseItem.id + ".zip"}
         buttonText="Download case details"
       />
 
       <p className="text-lg text-center">{caseItem.description}</p>
-
     </div>
   );
 }

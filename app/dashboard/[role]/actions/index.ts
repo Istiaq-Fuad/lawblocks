@@ -23,6 +23,8 @@ export async function saveCase(data: FormData) {
   const newCase: CaseType = {
     id: id,
     title: data.get("title") as string,
+    chiefJudge: data.get("chiefJudge") as string,
+    chiefInvestigator: data.get("chiefInvestigator") as string,
     createdAt: new Date().toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
