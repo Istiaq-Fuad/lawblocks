@@ -3,7 +3,6 @@ import { Select } from "@/components/ui/select";
 import { CubeIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import React from "react";
-import { AiOutlineBlock } from "react-icons/ai";
 
 export default function Home() {
   return (
