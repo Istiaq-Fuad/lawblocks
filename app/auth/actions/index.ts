@@ -1,6 +1,5 @@
 "use server";
 
-import { createSupbaseServerClient } from "@/lib/supabase";
 import { redirect } from "next/navigation";
 
 type memberType = {
