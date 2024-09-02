@@ -26,7 +26,7 @@ export default function EditCase({
   idType,
 }: {
   caseItem: CaseType;
-  idType: "judge" | "court" | "police" | "lawyer";
+  idType: "judge" | "court-clerk" | "police" | "lawyer";
 }) {
   const { id, description, status } = caseItem;
 
@@ -82,7 +82,7 @@ export default function EditCase({
     });
   };
 
-  if (!(idType === "judge" || idType === "court")) {
+  if (!(idType === "judge" || idType === "court-clerk")) {
     return null;
   }
 

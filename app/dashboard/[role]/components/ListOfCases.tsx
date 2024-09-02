@@ -72,7 +72,7 @@ export default function ListOfCases() {
                 idType={
                   pathName.split("/").pop() as
                     | "judge"
-                    | "court"
+                    | "court-clerk"
                     | "police"
                     | "lawyer"
                 }

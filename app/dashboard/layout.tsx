@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <SignOut />
       </div>
 
-      <div className="w-full sm:flex-1 p-5 sm:p-10 space-y-5 bg-gray-100 dark:bg-inherit">
+      <div className="w-full sm:flex-1 p-5 sm:px-10 sm:py-5 space-y-5 bg-gray-100 dark:bg-inherit">
         {/* <CaseContextProvider caseData={cases}>{children}</CaseContextProvider> */}
         {children}
       </div>
